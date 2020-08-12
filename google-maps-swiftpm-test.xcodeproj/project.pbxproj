@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		29D3C90E24E3414C001365DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D3C90C24E3414C001365DC /* Main.storyboard */; };
 		29D3C91024E3414D001365DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D3C90F24E3414D001365DC /* Assets.xcassets */; };
 		29D3C91324E3414D001365DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D3C91124E3414D001365DC /* LaunchScreen.storyboard */; };
+		29D3C91F24E49DEE001365DC /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 29D3C91E24E49DEE001365DC /* GoogleMapsUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D3C91F24E49DEE001365DC /* GoogleMapsUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "google-maps-swiftpm-test";
+			packageProductDependencies = (
+				29D3C91E24E49DEE001365DC /* GoogleMapsUtils */,
+			);
 			productName = "google-maps-swiftpm-test";
 			productReference = 29D3C90324E3414C001365DC /* google-maps-swiftpm-test.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +115,9 @@
 				Base,
 			);
 			mainGroup = 29D3C8FA24E3414C001365DC;
+			packageReferences = (
+				29D3C91D24E49DEE001365DC /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
+			);
 			productRefGroup = 29D3C90424E3414C001365DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +301,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mdm.google-maps-swiftpm-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -312,6 +321,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mdm.google-maps-swiftpm-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -341,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29D3C91D24E49DEE001365DC /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/google-maps-ios-utils.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29D3C91E24E49DEE001365DC /* GoogleMapsUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29D3C91D24E49DEE001365DC /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */;
+			productName = GoogleMapsUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29D3C8FB24E3414C001365DC /* Project object */;
 }
